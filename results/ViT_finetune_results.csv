@@ -1,0 +1,7 @@
+Epoch [1/3], Training Loss: 1.0050
+Validation Loss: 1.0220, Accuracy: 0.4580
+Epoch [2/3], Training Loss: 0.6841
+Validation Loss: 1.0575, Accuracy: 0.4508
+Epoch [3/3], Training Loss: 0.4810
+Validation Loss: 1.0970, Accuracy: 0.4580
+Test Accuracy: 0.4595, Test F1 Score: 0.4617

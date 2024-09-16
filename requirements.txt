@@ -1,0 +1,10 @@
+torch
+transformers
+Pillow
+youtube_transcript_api
+pytube
+yt_dlp
+opencv-python
+pandas
+matplotlib
+scikit-learn

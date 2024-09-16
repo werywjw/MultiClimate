@@ -1,0 +1,30 @@
+*.DS_Store
+*.pdf
+*.pth
+!llama_acc.pdf
+# !paper/acl2023.pdf
+# *.mp4
+
+paper
+NLP4CC
+preprocess.ipynb
+finetune_BERTViT.ipynb
+finetune_ViT+BERT.ipynb
+
+*blx.bib
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.synctex.gz
+*.snm
+*.toc
+*.bcf
+*.fdb_latexmk
+*.fls
+*.brf
