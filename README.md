@@ -1,16 +1,14 @@
-# 🌏 MultiClimate: Stance Detection in Climate Change from YouTube Videos 🌎
+# 🌏 MultiClimate: Multimodal Stance Detection on Climate Change Videos 🌎
 
-<div align="center" style="text-align: center; white-space: nowrap;">
+<!-- <div align="center" style="text-align: center; white-space: nowrap;">
   <a href="https://www.overleaf.com/7859652375kgfgyhbjnrbw#2d62fc"> 📄Overleaf Paper📄</a> &nbsp; | &nbsp;
   <a href="https://docs.google.com/presentation/d/1WtomzTplkt2kyArtPGuhdFbDmlvHylvLyXN0EbCLU8A/edit#slide=id.p"> 🎥Google Docs Presentation🎥</a> 
-</div>
+</div> -->
 
 ## Abstract
 
 <div align="justify">
-Climate change is a pressing issue that has attracted increasing attention in recent years. However, the detection of stance on climate change from multimodal data is under-investigated and remains challenging due to a lack of reliable datasets. In this paper, we propose MultiClimate, the first open-source dataset of 100 videos and 4,207 frame-transcript pairs for stance detection with fully human annotations in climate change from YouTube videos. 
-We further deploy both state-of-the-art vision and large language models, as well as multimodal models to determine, whether these pairs are supportive, opposing or neutral on the issue of climate change, as part of the stance detection task.
-Empirical results show that our baseline multimodal model already performs well on some videos and fine-tuning techniques on our dataset yield an improvement of 25\% and 33\% in accuracy and F1 score respectively.
+Climate change (CC) has attracted increasing attention in NLP in recent years. However, detecting stances on CC from multimodal data is understudied and remains challenging due to a lack of reliable datasets. This paper proposes MultiClimate, the first open-source manually annotated stance detection dataset with  CC-related YouTube videos and  frame-transcript pairs. We deploy state-of-the-art vision and language models, as well as multimodal models for MultiClimate stance detection. Results show that text-only BERT significantly outperforms image-only ResNet50 and ViT. Combining both modalities achieves state-of-the-art,  in accuracy and  in F1. Our 100M-sized fusion models also beat the much larger 9B-sized multimodal IDEFICS and text-only Llama3 and Gemma2, indicating that multimodal stance detection remains a challenging task.
 </div>
 
 ## Overview Workflow
@@ -69,59 +67,59 @@ ffmpeg -i HCCAW.mp4 -vf "select='gt(scene,0.4)'" -vsync vfr frame-%2d.jpg
 - 👍: Videos (animations) selected and annotated by both annotators
 - ✅: Check sign that full sentences and relabeling are done
 
-|#| Youtube-ID       |Title              | Link                  |Annotators (IAA) |
-|--|:----------------:|:-----------------:|:-----------------:|:---------------:|
-|👍1|brN2_YNAEK8       |About the Committee on Climate Change| [ACCC](https://www.youtube.com/watch?v=brN2_YNAEK8) | ✅Jiawen, Longfei (0.9152)🔵|
-|👍2|NTP5a1M2Z6I|Addressing Climate Change through Fiscal Policies in Indonesia| [ACCFP](https://www.youtube.com/watch?v=NTP5a1M2Z6I) | ✅Jiawen, Longfei (0.6978)🔴
-|3|t-MiN_0kYhM|Analysing impacts of air quality policies on health and climate change \| Denise Mauzerall| [AIAQ](https://www.youtube.com/watch?v=t-MiN_0kYhM)|✅Jiawen
-|4|BQr593iCEn8|AI and digital twins: Tools to tackle climate change| [AIDT](https://www.youtube.com/watch?v=BQr593iCEn8)|✅Jiawen
-|5|T4CTgXYI2kA|1-Arctic Methane and Climate Change| [AMCC](https://www.youtube.com/watch?v=T4CTgXYI2kA) | ✅Jiawen
-|6|xajNochi7tM|Big data and climate change| [BDCC](https://www.youtube.com/watch?v=xajNochi7tM)|✅Jiawen
-|7|eTqKLJ_o9yQ|Bitcoin Energy Consumption & Climate Change: Does Bitcoin Use Too Much Energy? [2021]| [BECCC](https://www.youtube.com/watch?v=eTqKLJ_o9yQ)|✅Jiawen
-|8|iKzdIzN4q2Q|Belize: Women in Fisheries Forum 5: Gender and Climate Change - Understanding the Link| [BWFF](https://www.youtube.com/watch?v=iKzdIzN4q2Q)|✅Jiawen
-|9|s4ly6o-VT90|Connections between air quality and climate - English - Sept. 2021| [CBAQC](https://www.youtube.com/watch?v=s4ly6o-VT90)|✅Jiawen 
-|👍10|FGs2QQWFqyQ|The Crucial Connection: Climate Change and Health \| Kaiser Permanente| [CCAH](https://www.youtube.com/watch?v=FGs2QQWFqyQ)|✅Jiawen, Longfei (0.7778)🔴
-|11|1tGWJ-NkcGU|Climate change, biodiversity and nutrition - Helping local heroes tell their stories| [CCBN](https://www.youtube.com/watch?v=1tGWJ-NkcGU)|✅Jiawen
-|12|lAop3wreUek|Climate change, biodiversity and nutrition nexus| [CCBNN](https://www.youtube.com/watch?v=lAop3wreUek)|✅Jiawen
-|13|4VXSrQospVY|Can climate change and biodiversity loss be tackled together? | [CCCBL](https://www.youtube.com/watch?v=4VXSrQospVY)|✅Jiawen
-|14|DRXQ9ixPbD8|Combating climate change in the Pacific| [CCCP](https://www.youtube.com/watch?v=DRXQ9ixPbD8)|✅Jiawen
-|15|TdxNG8L4JCM|Climate Change and Conflict in Somalia| [CCCS](https://www.youtube.com/watch?v=TdxNG8L4JCM)|✅Longfei
-|16|8fbrnAAg7VM|Climate change and development| [CCD](https://www.youtube.com/watch?v=8fbrnAAg7VM)|✅Jiawen
-|17|nXOB8YPyc04|Climate Change and Food Supply| [CCFS](https://www.youtube.com/watch?v=nXOB8YPyc04) | ✅Jiawen
-|18|MNdF-eVRWX4|Climate Change Fuelling Wilder Weather| [CCFWW](https://www.youtube.com/watch?v=MNdF-eVRWX4)| ✅Jiawen
-|19|v24wT16OU2w|Climate Change, Global Food Security, and the U.S. Food System| [CCGFS](https://www.youtube.com/watch?v=v24wT16OU2w)|✅Jiawen🟣
-|20|CA8iTY7iMCk|Climate Change and our Health (ADB Insight Full Episode)| [CCH](https://www.youtube.com/watch?v=CA8iTY7iMCk)| ✅Jiawen
-|21|mPE7D0wRYoU|Climate Change: Health Equity Stories from The Colorado Trust (English subtitles)| [CCHES](https://www.youtube.com/watch?v=mPE7D0wRYoU)|✅Jiawen
-|22|KxBAiad3Xto|Climate change in the Australian Alps| [CCIAA](https://www.youtube.com/watch?v=KxBAiad3Xto)|✅Jiawen
-|23|yeih2v4P25A|Climate Change: It’s About Health \| Kaiser Permanente| [CCIAH](https://www.youtube.com/watch?v=yeih2v4P25A)|✅Jiawen
-|👍24|m95K7LClIC4|350.org - Climate Change Is About Power| [CCIAP](https://www.youtube.com/watch?v=m95K7LClIC4) | ✅Jiawen, Longfei (0.6716)🟣
-|25|b919Fb-P3N8|Climate Change Impacts for Canadian Directors| [CCICD](https://www.youtube.com/watch?v=b919Fb-P3N8) |✅Jiawen
-|26|A7ktYbVwr90|Climate change is simple: David Roberts at TEDxTheEvergreenStateCollege|[CCIS](https://www.youtube.com/watch?v=A7ktYbVwr90)| ✅Jiawen|
-|27|yVvVk2zNSbo|Untold stories of climate change loss and damage in the LDCs: Sierra Leone| [CCISL](https://www.youtube.com/watch?v=yVvVk2zNSbo)|✅Jiawen
-|28|lNBP7aRskVE|Climate Change: Mitigate or Adapt| [CCMA](https://www.youtube.com/watch?v=lNBP7aRskVE)|✅Jiawen
-|👍29|5DVa8xBgToc|Climate Change for South African Directors|[CCSAD](https://www.youtube.com/watch?v=5DVa8xBgToc)|✅Jiawen, Longfei (0.4080)🔴
-|👍30|GeksVaAnMzc|Climate Change or Social Change: The Role of Blockchain| [CCSC](https://www.youtube.com/watch?v=GeksVaAnMzc)|✅Jiawen, Longfei (0.3244)
-|31|zI9h-HTBHO8|Climate Change: Take Action| [CCTA](https://www.youtube.com/watch?v=zI9h-HTBHO8)|✅Jiawen
-|32|fN-ZnY61_C8|Climate Change: The Philippines| [CCTP](https://www.youtube.com/watch?v=fN-ZnY61_C8)|✅Jiawen
-|👍33|Vve6zge_RsA       |Climate change unlikely to increase malaria burden in West Africa| [CCUIM](https://www.youtube.com/watch?v=Vve6zge_RsA)| ✅Jiawen, Longfei (0.6328)🔴
-|34|RZ-N5KwBaVc|Climate Change is Water Change| [CCWC](https://www.youtube.com/watch?v=RZ-N5KwBaVc)|✅Jiawen
-|35|MnTm89dSHhA|Climate Change and Water Quality| [CCWQ](https://www.youtube.com/watch?v=MnTm89dSHhA)|✅Jiawen
-|36|OL8a1YEhk_o|Honest Government Ad \| Climate Emergency & School Strikes| [CESS](https://www.youtube.com/watch?v=OL8a1YEhk_o)|✅Jiawen
-|👍37|b7LiW66cSM4|How should Coronavirus influence the fight against Climate Change?| [CICC](https://www.youtube.com/watch?v=b7LiW66cSM4)|✅Jiawen, Longfei (0.5681)🟣
-|38|vD0lx_b8jNM|COP28: Nuclear Science and Technology for Climate Change Adaptation| [COP](https://www.youtube.com/watch?v=vD0lx_b8jNM)|✅Jiawen
-|39|MeFbo0z0xi4|Crop production - Climate change affects biosphere \| Earth Hazards \| meriSTEM | [CPCC](https://www.youtube.com/watch?v=MeFbo0z0xi4)|✅Jiawen
-|40|FhyUbeDVM3k|Capturing and transforming CO2 to mitigate climate change | [CTCM](https://www.youtube.com/watch?v=FhyUbeDVM3k)|✅Jiawen
-|41|Gu5NKLxqTak|Diet and Climate Change: Cooking Up a Storm| [DACC](https://www.youtube.com/watch?v=Gu5NKLxqTak)|✅Jiawen
-|42|OfYGx-N_gB0|Deforestation and Climate Change| [DFCC](https://www.youtube.com/watch?v=OfYGx-N_gB0)|✅Jiawen
-|43|CG3pN7qQqZI|This Is How Denmark Protects Its Cities Against Climate Change| [DPIC](https://www.youtube.com/watch?v=CG3pN7qQqZI)|✅Jiawen
-|44|Ry-ei9Bu8UI|Developing tools for equality in climate change planning in Tanzania| [DTECC](https://www.youtube.com/watch?v=Ry-ei9Bu8UI) |✅Jiawen
-|45|M17pm2iPT_c|Effects Of Climate Change In MN Discussed At Seminar| [ECCDS](https://www.youtube.com/watch?v=M17pm2iPT_c)|✅Jiawen
-|46|HzL9hUOh_K4|Ecosystems at risk from Climate Change| [EFCC](https://www.youtube.com/watch?v=HzL9hUOh_K4)|✅Jiawen🟣
-|👍47|kjTAWBPPez0|Earth Is Blue: Climate Change in your Sanctuaries| [EIB](https://www.youtube.com/watch?v=kjTAWBPPez0)|✅Jiawen, Longfei (0.6474)🔴
-|👍48|Qmxg97Ae9Wg|Extreme Weather and Climate Change, EarthNow| [EWCC](https://www.youtube.com/watch?v=Qmxg97Ae9Wg)|✅Jiawen, Longfei (0.6903)🔴
-|👍49|Wrb4b28dgcU|Forests and Climate Change| [FCC](https://www.youtube.com/watch?v=Wrb4b28dgcU)|✅Jiawen, Longfei (0.6061)
-|50|9DaUn0geq4U|Fiji: Standing tall against climate change threats| [FIJI](https://www.youtube.com/watch?v=9DaUn0geq4U)|✅Jiawen🟣
-|👍51|ison6lQozDU|Food loss and waste are among the main causes of climate change| [FLW](https://www.youtube.com/watch?v=ison6lQozDU)|✅Jiawen, Longfei (0.8182)🔵
+|#| Youtube-ID       |Title              | Link                  |Annotators (IAA) |Label
+|--|:----------------:|:-----------------:|:-----------------:|:---------------:|:---------------:|
+|👍1|brN2_YNAEK8       |About the Committee on Climate Change| [ACCC](https://www.youtube.com/watch?v=brN2_YNAEK8) | ✅Jiawen, Longfei (0.9152)🔵|1️⃣
+|👍2|NTP5a1M2Z6I|Addressing Climate Change through Fiscal Policies in Indonesia| [ACCFP](https://www.youtube.com/watch?v=NTP5a1M2Z6I) | ✅Jiawen, Longfei (0.6978)🔴|1️⃣
+|3|t-MiN_0kYhM|Analysing impacts of air quality policies on health and climate change \| Denise Mauzerall| [AIAQ](https://www.youtube.com/watch?v=t-MiN_0kYhM)|✅Jiawen|1️⃣
+|4|BQr593iCEn8|AI and digital twins: Tools to tackle climate change| [AIDT](https://www.youtube.com/watch?v=BQr593iCEn8)|✅Jiawen|1️⃣
+|5|T4CTgXYI2kA|1-Arctic Methane and Climate Change| [AMCC](https://www.youtube.com/watch?v=T4CTgXYI2kA) | ✅Jiawen|0️⃣
+|6|xajNochi7tM|Big data and climate change| [BDCC](https://www.youtube.com/watch?v=xajNochi7tM)|✅Jiawen|0️⃣
+|7|eTqKLJ_o9yQ|Bitcoin Energy Consumption & Climate Change: Does Bitcoin Use Too Much Energy? [2021]| [BECCC](https://www.youtube.com/watch?v=eTqKLJ_o9yQ)|✅Jiawen|2️⃣
+|8|iKzdIzN4q2Q|Belize: Women in Fisheries Forum 5: Gender and Climate Change - Understanding the Link| [BWFF](https://www.youtube.com/watch?v=iKzdIzN4q2Q)|✅Jiawen|1️⃣
+|9|s4ly6o-VT90|Connections between air quality and climate - English - Sept. 2021| [CBAQC](https://www.youtube.com/watch?v=s4ly6o-VT90)|✅Jiawen |2️⃣
+|👍10|FGs2QQWFqyQ|The Crucial Connection: Climate Change and Health \| Kaiser Permanente| [CCAH](https://www.youtube.com/watch?v=FGs2QQWFqyQ)|✅Jiawen, Longfei (0.7778)🔴|2️⃣
+|11|1tGWJ-NkcGU|Climate change, biodiversity and nutrition - Helping local heroes tell their stories| [CCBN](https://www.youtube.com/watch?v=1tGWJ-NkcGU)|✅Jiawen|1️⃣
+|12|lAop3wreUek|Climate change, biodiversity and nutrition nexus| [CCBNN](https://www.youtube.com/watch?v=lAop3wreUek)|✅Jiawen|1️⃣
+|13|4VXSrQospVY|Can climate change and biodiversity loss be tackled together? | [CCCBL](https://www.youtube.com/watch?v=4VXSrQospVY)|✅Jiawen|1️⃣
+|14|DRXQ9ixPbD8|Combating climate change in the Pacific| [CCCP](https://www.youtube.com/watch?v=DRXQ9ixPbD8)|✅Jiawen|1️⃣
+|15|TdxNG8L4JCM|Climate Change and Conflict in Somalia| [CCCS](https://www.youtube.com/watch?v=TdxNG8L4JCM)|✅Longfei|1️⃣
+|16|8fbrnAAg7VM|Climate change and development| [CCD](https://www.youtube.com/watch?v=8fbrnAAg7VM)|✅Jiawen|2️⃣
+|17|nXOB8YPyc04|Climate Change and Food Supply| [CCFS](https://www.youtube.com/watch?v=nXOB8YPyc04) | ✅Jiawen|2️⃣
+|18|MNdF-eVRWX4|Climate Change Fuelling Wilder Weather| [CCFWW](https://www.youtube.com/watch?v=MNdF-eVRWX4)| ✅Jiawen|2️⃣
+|19|v24wT16OU2w|Climate Change, Global Food Security, and the U.S. Food System| [CCGFS](https://www.youtube.com/watch?v=v24wT16OU2w)|✅Jiawen🟣|1️⃣
+|20|CA8iTY7iMCk|Climate Change and our Health (ADB Insight Full Episode)| [CCH](https://www.youtube.com/watch?v=CA8iTY7iMCk)| ✅Jiawen|1️⃣
+|21|mPE7D0wRYoU|Climate Change: Health Equity Stories from The Colorado Trust (English subtitles)| [CCHES](https://www.youtube.com/watch?v=mPE7D0wRYoU)|✅Jiawen|2️⃣
+|22|KxBAiad3Xto|Climate change in the Australian Alps| [CCIAA](https://www.youtube.com/watch?v=KxBAiad3Xto)|✅Jiawen|1️⃣
+|23|yeih2v4P25A|Climate Change: It’s About Health \| Kaiser Permanente| [CCIAH](https://www.youtube.com/watch?v=yeih2v4P25A)|✅Jiawen|1️⃣
+|👍24|m95K7LClIC4|350.org - Climate Change Is About Power| [CCIAP](https://www.youtube.com/watch?v=m95K7LClIC4) | ✅Jiawen, Longfei (0.6716)🟣|1️⃣
+|25|b919Fb-P3N8|Climate Change Impacts for Canadian Directors| [CCICD](https://www.youtube.com/watch?v=b919Fb-P3N8) |✅Jiawen|2️⃣
+|26|A7ktYbVwr90|Climate change is simple: David Roberts at TEDxTheEvergreenStateCollege|[CCIS](https://www.youtube.com/watch?v=A7ktYbVwr90)| ✅Jiawen|2️⃣|
+|27|yVvVk2zNSbo|Untold stories of climate change loss and damage in the LDCs: Sierra Leone| [CCISL](https://www.youtube.com/watch?v=yVvVk2zNSbo)|✅Jiawen|2️⃣
+|28|lNBP7aRskVE|Climate Change: Mitigate or Adapt| [CCMA](https://www.youtube.com/watch?v=lNBP7aRskVE)|✅Jiawen|1️⃣
+|👍29|5DVa8xBgToc|Climate Change for South African Directors|[CCSAD](https://www.youtube.com/watch?v=5DVa8xBgToc)|✅Jiawen, Longfei (0.4080)🔴|1️⃣
+|👍30|GeksVaAnMzc|Climate Change or Social Change: The Role of Blockchain| [CCSC](https://www.youtube.com/watch?v=GeksVaAnMzc)|✅Jiawen, Longfei (0.3244)|1️⃣
+|31|zI9h-HTBHO8|Climate Change: Take Action| [CCTA](https://www.youtube.com/watch?v=zI9h-HTBHO8)|✅Jiawen|1️⃣
+|32|fN-ZnY61_C8|Climate Change: The Philippines| [CCTP](https://www.youtube.com/watch?v=fN-ZnY61_C8)|✅Jiawen|1️⃣
+|👍33|Vve6zge_RsA       |Climate change unlikely to increase malaria burden in West Africa| [CCUIM](https://www.youtube.com/watch?v=Vve6zge_RsA)| ✅Jiawen, Longfei (0.6328)🔴|0️⃣
+|34|RZ-N5KwBaVc|Climate Change is Water Change| [CCWC](https://www.youtube.com/watch?v=RZ-N5KwBaVc)|✅Jiawen|1️⃣
+|35|MnTm89dSHhA|Climate Change and Water Quality| [CCWQ](https://www.youtube.com/watch?v=MnTm89dSHhA)|✅Jiawen|1️⃣
+|36|OL8a1YEhk_o|Honest Government Ad \| Climate Emergency & School Strikes| [CESS](https://www.youtube.com/watch?v=OL8a1YEhk_o)|✅Jiawen|2️⃣
+|👍37|b7LiW66cSM4|How should Coronavirus influence the fight against Climate Change?| [CICC](https://www.youtube.com/watch?v=b7LiW66cSM4)|✅Jiawen, Longfei (0.5681)🟣|1️⃣
+|38|vD0lx_b8jNM|COP28: Nuclear Science and Technology for Climate Change Adaptation| [COP](https://www.youtube.com/watch?v=vD0lx_b8jNM)|✅Jiawen|1️⃣
+|39|MeFbo0z0xi4|Crop production - Climate change affects biosphere \| Earth Hazards \| meriSTEM | [CPCC](https://www.youtube.com/watch?v=MeFbo0z0xi4)|✅Jiawen|1️⃣
+|40|FhyUbeDVM3k|Capturing and transforming CO2 to mitigate climate change | [CTCM](https://www.youtube.com/watch?v=FhyUbeDVM3k)|✅Jiawen|1️⃣
+|41|Gu5NKLxqTak|Diet and Climate Change: Cooking Up a Storm| [DACC](https://www.youtube.com/watch?v=Gu5NKLxqTak)|✅Jiawen|1️⃣
+|42|OfYGx-N_gB0|Deforestation and Climate Change| [DFCC](https://www.youtube.com/watch?v=OfYGx-N_gB0)|✅Jiawen|1️⃣
+|43|CG3pN7qQqZI|This Is How Denmark Protects Its Cities Against Climate Change| [DPIC](https://www.youtube.com/watch?v=CG3pN7qQqZI)|✅Jiawen|1️⃣
+|44|Ry-ei9Bu8UI|Developing tools for equality in climate change planning in Tanzania| [DTECC](https://www.youtube.com/watch?v=Ry-ei9Bu8UI) |✅Jiawen|1️⃣
+|45|M17pm2iPT_c|Effects Of Climate Change In MN Discussed At Seminar| [ECCDS](https://www.youtube.com/watch?v=M17pm2iPT_c)|✅Jiawen|1️⃣
+|46|HzL9hUOh_K4|Ecosystems at risk from Climate Change| [EFCC](https://www.youtube.com/watch?v=HzL9hUOh_K4)|✅Jiawen🟣|1️⃣
+|👍47|kjTAWBPPez0|Earth Is Blue: Climate Change in your Sanctuaries| [EIB](https://www.youtube.com/watch?v=kjTAWBPPez0)|✅Jiawen, Longfei (0.6474)🔴|1️⃣
+|👍48|Qmxg97Ae9Wg|Extreme Weather and Climate Change, EarthNow| [EWCC](https://www.youtube.com/watch?v=Qmxg97Ae9Wg)|✅Jiawen, Longfei (0.6903)🔴|2️⃣
+|👍49|Wrb4b28dgcU|Forests and Climate Change| [FCC](https://www.youtube.com/watch?v=Wrb4b28dgcU)|✅Jiawen, Longfei (0.6061)|2️⃣
+|50|9DaUn0geq4U|Fiji: Standing tall against climate change threats| [FIJI](https://www.youtube.com/watch?v=9DaUn0geq4U)|✅Jiawen🟣|2️⃣
+|👍51|ison6lQozDU|Food loss and waste are among the main causes of climate change| [FLW](https://www.youtube.com/watch?v=ison6lQozDU)|✅Jiawen, Longfei (0.8182)🔵|2️⃣
 |52|M9wSP16P9xM|+Forest, together against climate change| [FTACC](https://www.youtube.com/watch?v=M9wSP16P9xM) | ✅Longfei
 |👍53|epZ9Rw-i8Mo|Greenland's glaciers and Climate Change, Danish Broadcasting Corporation - Denmark| [GGCC](https://www.youtube.com/watch?v=epZ9Rw-i8Mo)|Jiawen, ✅Longfei (0.7362)🔴
 |54|S9Z_h1_LQ0o|How Climate Change Affects Biodiversity| [HCCAB](https://www.youtube.com/watch?v=S9Z_h1_LQ0o) | ✅Longfei🟣
@@ -174,3 +172,4 @@ ffmpeg -i HCCAW.mp4 -vf "select='gt(scene,0.4)'" -vsync vfr frame-%2d.jpg
 
 
 Note that we use a maximum of 5 characters when naming the link for simplicity. 
+If frame-transcript labels in one video are same, we rank 2️⃣ > 1️⃣ > 0️⃣ due to inbalanced data.
