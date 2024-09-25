@@ -55,7 +55,7 @@ ffmpeg -i HCCAW.mp4 -vf "select='gt(scene,0.4)'" -vsync vfr frame-%2d.jpg
 
 ## Dataset Statistics
 
-|Set| #          |Videos              | 0️⃣| 1️⃣| 2️⃣|
+|Set| #          |Videos              | 0️⃣ (16)| 1️⃣ (58)| 2️⃣ (26)|
 |---|:----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 |Train🔵|3,372|Others|1,036|1,449|887
 |Dev🟣|417| CCGFS, CCIAP, CICC, EFCC, FIJI, HCCAB, HRDCC, HUSNS, MACC, SAPFS|83|204|130
