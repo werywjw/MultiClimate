@@ -8,7 +8,7 @@
 ## Abstract
 
 <div align="justify">
-Climate change (CC) has attracted increasing attention in NLP in recent years. However, detecting stances on CC from multimodal data is understudied and remains challenging due to a lack of reliable datasets. This paper proposes MultiClimate, the first open-source manually annotated stance detection dataset with  CC-related YouTube videos and  frame-transcript pairs. We deploy state-of-the-art vision and language models, as well as multimodal models for MultiClimate stance detection. Results show that text-only BERT significantly outperforms image-only ResNet50 and ViT. Combining both modalities achieves state-of-the-art,  in accuracy and  in F1. Our 100M-sized fusion models also beat the much larger 9B-sized multimodal IDEFICS and text-only Llama3 and Gemma2, indicating that multimodal stance detection remains a challenging task.
+Climate change (CC) has attracted increasing attention in NLP in recent years. However, detecting the stance on CC in multimodal data is understudied and remains challenging due to a lack of reliable datasets. To improve the understanding of public opinions and communication strategies, this paper presents MultiClimate, the first open-source manually-annotated stance detection dataset with 100 CC-related YouTube videos and 4,209 frame-transcript pairs. We deploy state-of-the-art vision and language models, as well as multimodal models for MultiClimate stance detection. Results show that text-only BERT significantly outperforms image-only ResNet50 and ViT. Combining both modalities achieves state-of-the-art, 0.747/0.749 in accuracy/F1. Our 100M-sized fusion models also beat CLIP and BLIP, as well as the much larger 9B-sized multimodal IDEFICS and text-only Llama3 and Gemma2, indicating that multimodal stance detection remains challenging for large language models.
 </div>
 
 ## Overview Workflow
@@ -173,3 +173,18 @@ ffmpeg -i HCCAW.mp4 -vf "select='gt(scene,0.4)'" -vsync vfr frame-%2d.jpg
 
 Note that we use a maximum of 5 characters when naming the link for simplicity. 
 If frame-transcript labels in one video are same, we rank 2️⃣ > 1️⃣ > 0️⃣ due to inbalanced data.
+
+## Citation 
+
+Please kindly cite if you find this repository helpful. 
+
+```bibtex
+  @inproceedings{
+  anonymous2024multiclimate,
+  title={MultiClimate: Multimodal Stance Detection on Climate Change Videos},
+  author={Anonymous},
+  booktitle={Third Workshop on NLP for Positive Impact (Direct Submission)},
+  year={2024},
+  url={https://openreview.net/forum?id=nkE3YYGHY5}
+  }
+```
