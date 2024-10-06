@@ -17,93 +17,125 @@ Climate change (CC) has attracted increasing attention in NLP in recent years. H
 
 <table>
   <tr>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/EIB/EIB_frames/EIB-039.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.</div>
-        </figcaption>
-      </figure>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/EIB/EIB_frames/EIB-039.jpg" width="300" height="168" alt="Climate Change Image">
     </td>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/EIB/EIB_frames/EIB-040.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.</div>
-        </figcaption>
-      </figure>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.
+        </p>
+      </div>
     </td>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/EIB/EIB_frames/EIB-041.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">And revealing their wonders for generations to come.</div>
-        </figcaption>
-      </figure>
+  </tr>
+  <tr>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/EIB/EIB_frames/EIB-040.jpg" width="300" height="168" alt="Climate Change Image">
+    </td>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/EIB/EIB_frames/EIB-041.jpg" width="300" height="168" alt="Climate Change Image">
+    </td>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          And revealing their wonders for generations to come.
+        </p>
+      </div>
     </td>
   </tr>
 </table>
 
 ---
+
 <p style="font-size:25px;">Neutral</p>
 
 <table>
   <tr>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/AMCC/AMCC_frames/AMCC-072.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">[Music]</div>
-        </figcaption>
-      </figure>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/AMCC/AMCC_frames/AMCC-072.jpg" width="300" height="168" alt="Climate Change Image">
     </td>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/AMCC/AMCC_frames/AMCC-073.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">[Music]</div>
-        </figcaption>
-      </figure>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          [Music]
+        </p>
+      </div>
     </td>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/AMCC/AMCC_frames/AMCC-074.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">[Music]</div>
-        </figcaption>
-      </figure>
+  </tr>
+  <tr>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/AMCC/AMCC_frames/AMCC-073.jpg" width="300" height="168" alt="Climate Change Image">
+    </td>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          [Music]
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/AMCC/AMCC_frames/AMCC-074.jpg" width="300" height="168" alt="Climate Change Image">
+    </td>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          [Music]
+        </p>
+      </div>
     </td>
   </tr>
 </table>
 
 ---
+
 <p style="font-size:25px;">Oppose</p>
 
 <table>
   <tr>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-009.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">This double threat of climate change and war pushes people out of their homes, breaks food and supply chains amplifies diseases and weakens health care services.</div>
-        </figcaption>
-      </figure>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-009.jpg" width="300" height="168" alt="Climate Change Image">
     </td>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-010.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">By 2050 the need for humanitarian aid is expected to double if urgent steps are not taken.</div>
-        </figcaption>
-      </figure>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          This double threat of climate change and war pushes people out of their homes, breaks food and supply chains amplifies diseases and weakens health care services.
+        </p>
+      </div>
     </td>
-    <td style="width: 300px; vertical-align: top;">
-      <figure>
-        <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-011.jpg" width="288" height="162">
-        <figcaption>
-        <div align="justify">We cannot let this happen.</div>
-        </figcaption>
-      </figure>
+  </tr>
+  <tr>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-010.jpg" width="300" height="168" alt="Climate Change Image">
+    </td>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          By 2050 the need for humanitarian aid is expected to double if urgent steps are not taken.
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
+      <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-011.jpg" width="300" height="168" alt="Climate Change Image">
+    </td>
+    <td style="width: 60%; vertical-align: top;">
+      <div align="justify">
+        <p>
+          We cannot let this happen.
+        </p>
+      </div>
     </td>
   </tr>
 </table>
