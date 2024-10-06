@@ -11,6 +11,105 @@
 Climate change (CC) has attracted increasing attention in NLP in recent years. However, detecting the stance on CC in multimodal data is understudied and remains challenging due to a lack of reliable datasets. To improve the understanding of public opinions and communication strategies, this paper presents MultiClimate, the first open-source manually-annotated stance detection dataset with 100 CC-related YouTube videos and 4,209 frame-transcript pairs. We deploy state-of-the-art vision and language models, as well as multimodal models for MultiClimate stance detection. Results show that text-only BERT significantly outperforms image-only ResNet50 and ViT. Combining both modalities achieves state-of-the-art, 0.747/0.749 in accuracy/F1. Our 100M-sized fusion models also beat CLIP and BLIP, as well as the much larger 9B-sized multimodal IDEFICS and text-only Llama3 and Gemma2, indicating that multimodal stance detection remains challenging for large language models.
 </div>
 
+## MultiClimate Dataset
+
+<p style="font-size:20px;">Support</p>
+
+<table>
+  <tr>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/EIB/EIB_frames/EIB-039.jpg">
+        <figcaption>
+        <div align="justify">Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.</div>
+        </figcaption>
+      </figure>
+    </td>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/EIB/EIB_frames/EIB-040.jpg">
+        <figcaption>
+        <div align="justify">Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.</div>
+        </figcaption>
+      </figure>
+    </td>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/EIB/EIB_frames/EIB-041.jpg">
+        <figcaption>
+        <div align="justify">And revealing their wonders for generations to come.</div>
+        </figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
+---
+<p style="font-size:20px;">Neutral</p>
+
+<table>
+  <tr>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/AMCC/AMCC_frames/AMCC-072.jpg">
+        <figcaption>
+        <div align="justify">[Music]</div>
+        </figcaption>
+      </figure>
+    </td>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/AMCC/AMCC_frames/AMCC-073.jpg">
+        <figcaption>
+        <div align="justify">[Music]</div>
+        </figcaption>
+      </figure>
+    </td>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/AMCC/AMCC_frames/AMCC-074.jpg">
+        <figcaption>
+        <div align="justify">[Music]</div>
+        </figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
+---
+<p style="font-size:20px;">Oppose</p>
+
+<table>
+  <tr>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-009.jpg">
+        <figcaption>
+        <div align="justify">This double threat of climate change and war pushes people out of their homes, breaks food and supply chains amplifies diseases and weakens health care services.</div>
+        </figcaption>
+      </figure>
+    </td>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-010.jpg">
+        <figcaption>
+        <div align="justify">By 2050 the need for humanitarian aid is expected to double if urgent steps are not taken.</div>
+        </figcaption>
+      </figure>
+    </td>
+    <td style="width: 300px; vertical-align: top;">
+      <figure>
+        <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-011.jpg">
+        <figcaption>
+        <div align="justify">We cannot let this happen.</div>
+        </figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## Overview Workflow
 1. Filter videos by CC (Creative Commons) LICENSE
 1. Make sure there is the transcript and available in English \
@@ -32,8 +131,6 @@ E.g., [Combating the effects of climate change in the Caribbean](https://www.you
 E.g., [Forests Migrate But Not Fast Enough For Climate Change | World Economic Forum](https://www.youtube.com/watch?v=5lDr0rf7S2E) only background music \
 E.g., [Protagonists, Together against climate change.](https://www.youtube.com/watch?v=xrN28vBAQgo) subtitles in Spain \
 E.g., [Fighting climate change with underwater meadows | UpLink](https://www.youtube.com/watch?v=i1XKClXcM_Y) only background music 
-
-
 
 
 1. Download the video and scripts using `youtube.ipynb` \
@@ -179,12 +276,10 @@ If frame-transcript labels in one video are same, we rank 2️⃣ > 1️⃣ > 0�
 Please kindly cite if you find this repository helpful. 
 
 ```bibtex
-  @inproceedings{
-  anonymous2024multiclimate,
+@article{wang2024multiclimate,
   title={MultiClimate: Multimodal Stance Detection on Climate Change Videos},
-  author={Anonymous},
-  booktitle={Third Workshop on NLP for Positive Impact (Direct Submission)},
-  year={2024},
-  url={https://openreview.net/forum?id=nkE3YYGHY5}
-  }
+  author={Wang, Jiawen and Zuo, Longfei and Peng, Siyao and Plank, Barbara},
+  journal={arXiv preprint arXiv:2409.18346},
+  year={2024}
+}
 ```
