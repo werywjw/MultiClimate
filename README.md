@@ -11,136 +11,16 @@
 Climate change (CC) has attracted increasing attention in NLP in recent years. However, detecting the stance on CC in multimodal data is understudied and remains challenging due to a lack of reliable datasets. To improve the understanding of public opinions and communication strategies, this paper presents MultiClimate, the first open-source manually-annotated stance detection dataset with 100 CC-related YouTube videos and 4,209 frame-transcript pairs. We deploy state-of-the-art vision and language models, as well as multimodal models for MultiClimate stance detection. Results show that text-only BERT significantly outperforms image-only ResNet50 and ViT. Combining both modalities achieves state-of-the-art, 0.747/0.749 in accuracy/F1. Our 100M-sized fusion models also beat CLIP and BLIP, as well as the much larger 9B-sized multimodal IDEFICS and text-only Llama3 and Gemma2, indicating that multimodal stance detection remains challenging for large language models.
 </div>
 
-## MultiClimate Dataset
+## MultiClimate Dataset Examples
 
-<p style="font-size:25px;">Support</p>
-
-<table>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/EIB/EIB_frames/EIB-039.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/EIB/EIB_frames/EIB-040.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/EIB/EIB_frames/EIB-041.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          And revealing their wonders for generations to come.
-        </p>
-      </div>
-    </td>
-  </tr>
-</table>
-
----
-
-<p style="font-size:25px;">Neutral</p>
-
-<table>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/AMCC/AMCC_frames/AMCC-072.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          [Music]
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/AMCC/AMCC_frames/AMCC-073.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          [Music]
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/AMCC/AMCC_frames/AMCC-074.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          [Music]
-        </p>
-      </div>
-    </td>
-  </tr>
-</table>
-
----
-
-<p style="font-size:25px;">Oppose</p>
-
-<table>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-009.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          This double threat of climate change and war pushes people out of their homes, breaks food and supply chains amplifies diseases and weakens health care services.
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-010.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          By 2050 the need for humanitarian aid is expected to double if urgent steps are not taken.
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td style="width: 40%; vertical-align: top; padding-right: 20px;">
-      <img src="./dataset/TIOCC/TIOCC_frames/TIOCC-011.jpg" width="300" height="168" alt="Climate Change Image">
-    </td>
-    <td style="width: 60%; vertical-align: top;">
-      <div align="justify">
-        <p>
-          We cannot let this happen.
-        </p>
-      </div>
-    </td>
-  </tr>
-</table>
-
----
+|Image-transcript (Label)|Example 1|Example 2|Example 3|
+|-------|----------|------------|------------|
+|Image (Support)|![](./dataset/EIB/EIB_frames/EIB-039.jpg)|![](./dataset/EIB/EIB_frames/EIB-040.jpg)|![](./dataset/EIB/EIB_frames/EIB-041.jpg)|
+|Transcript (Support)|Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.|Together we can address the causes and impacts of climate change to ensure that our spectacular ocean and great lakes continue to thrive while supporting our economies and values.|And revealing their wonders for generations to come.|
+|Image (Neutral)|![](./dataset/AMCC/AMCC_frames/AMCC-072.jpg)|![](./dataset/AMCC/AMCC_frames/AMCC-073.jpg)|![](./dataset/AMCC/AMCC_frames/AMCC-074.jpg)|
+|Transcript (Neutral)|[Music]|[Music]|[Music]|
+|Image (Oppose)|![](./dataset/TIOCC/TIOCC_frames/TIOCC-009.jpg)|![](./dataset/TIOCC/TIOCC_frames/TIOCC-010.jpg)|![](./dataset/TIOCC/TIOCC_frames/TIOCC-011.jpg)|
+|Transcript (Oppose)|This double threat of climate change and war pushes people out of their homes, breaks food and supply chains amplifies diseases and weakens health care services.|By 2050 the need for humanitarian aid is expected to double if urgent steps are not taken.|We cannot let this happen.|
 
 ## Overview Workflow
 1. Filter videos by CC (Creative Commons) LICENSE
