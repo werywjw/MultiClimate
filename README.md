@@ -188,10 +188,11 @@ If frame-transcript labels in one video are same, we rank 2️⃣ > 1️⃣ > 0�
 Please kindly cite if you find this repository helpful. 
 
 ```bibtex
-@article{wang2024multiclimate,
-  title={MultiClimate: Multimodal Stance Detection on Climate Change Videos},
+@inproceedings{wang2024multiclimate,
+  title={MultiClimate: Multimodal stance detection on climate change videos},
   author={Wang, Jiawen and Zuo, Longfei and Peng, Siyao and Plank, Barbara},
-  journal={arXiv preprint arXiv:2409.18346},
+  booktitle={Proceedings of the Third Workshop on NLP for Positive Impact},
+  pages={315--326},
   year={2024}
 }
 ```
